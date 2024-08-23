@@ -1,0 +1,13 @@
+.counterBtn {
+    background-color: grey;
+    color: black;
+    transition: background-color 250ms ease;
+}
+
+.counterBtn:not(:nth-last-child(0)){
+    margin-right: 5px;
+}
+
+.counterBtn:hover{
+    background-color: darkgray;
+}

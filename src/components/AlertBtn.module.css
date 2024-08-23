@@ -1,0 +1,11 @@
+.alertBtn {
+    background-color: red;
+    color: black;
+    border: 1px solid black;
+    transition: background-color 250ms ease;
+    outline: hidden;
+}
+
+.alertBtn:hover{
+    background-color: pink;
+}

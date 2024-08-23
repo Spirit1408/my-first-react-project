@@ -5,6 +5,12 @@ import { inbox } from "./messages.js";
 import { Card } from "./Card.jsx";
 import { Alert } from "./Alert.jsx";
 import { User } from "./User.jsx";
+import AlertBtn from "./AlertBtn.jsx";
+import CustomBtn from "./CustomBtn.jsx";
+import CounterBtn from "./CounterBtn.jsx";
+import ToggleElement from "./ToggleElement.jsx";
+import CounterAll from "./CounterAll.jsx";
+import ChangeCoords from './ChangeCoords.jsx'
 
 export default function App() {
 	return (
@@ -57,6 +63,37 @@ export default function App() {
 			<hr />
 
 			<User name="Oleh" />
+
+			<hr />
+
+			<AlertBtn />
+
+			<hr />
+
+			<CustomBtn message={"Playing music!"} subClass={"music"}>
+				Play some music
+			</CustomBtn>
+			<CustomBtn message={"Showing movie!"} subClass={"movie"}>
+				Show some movie
+			</CustomBtn>
+
+			<hr />
+
+			<CounterBtn />
+			<CounterBtn />
+			<CounterBtn />
+
+			<hr />
+
+			<ToggleElement />
+
+			<hr />
+
+			<CounterAll />
+
+			<hr />
+
+			<ChangeCoords />
 		</div>
 	);
 }
