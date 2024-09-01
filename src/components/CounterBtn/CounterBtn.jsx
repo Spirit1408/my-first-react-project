@@ -9,7 +9,11 @@ export default function CounterBtn() {
 	};
 
 	return (
-		<button className={counterBtnClass.counterBtn} onClick={handleCounter}>
+		<button
+			type="button"
+			className={counterBtnClass.counterBtn}
+			onClick={handleCounter}
+		>
 			{counter}
 		</button>
 	);

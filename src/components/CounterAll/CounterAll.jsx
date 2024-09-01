@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CounterAllBtn from "./CounterAllBtn";
+import CounterAllBtn from "../CounterAllBtn/CounterAllBtn";
 
 export default function CounterAll() {
 	const [counter, setCounter] = useState(0);

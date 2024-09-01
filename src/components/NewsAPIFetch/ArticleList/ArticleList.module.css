@@ -1,0 +1,13 @@
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link {
+    color: #ffffff;
+    transition: color 250ms ease;
+}
+
+.title{
+    text-align: center;
+}

@@ -9,7 +9,9 @@ export default function ToggleElement() {
 
 	return (
 		<>
-			<button onClick={handleState}>{state ? "Hide" : "Show"}</button>
+			<button type="button" onClick={handleState}>
+				{state ? "Hide" : "Show"}
+			</button>
 			{state && <p>Now you can see me!</p>}
 		</>
 	);

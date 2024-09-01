@@ -20,8 +20,12 @@ export default function ChangeCoords() {
 				X: {values.x}, Y: {values.y}
 			</p>
 			<div style={{ display: "flex", gap: 5, justifyContent: "center" }}>
-				<button onClick={updateX}>Update X</button>
-				<button onClick={updateY}>Update Y</button>
+				<button type="button" onClick={updateX}>
+					Update X
+				</button>
+				<button type="button" onClick={updateY}>
+					Update Y
+				</button>
 			</div>
 		</div>
 	);

@@ -1,0 +1,14 @@
+.newsContainer {
+    text-align: left;
+}
+
+.info {
+    text-align: center;
+}
+
+.radioLoader {
+  margin: 20px auto; /* Для центровки и добавления отступов */
+  border-radius: 50%; /* Пример изменения формы */
+  background-color: #00a2ff; /* Добавление фона */
+  padding: 10px; /* Отступ внутри */
+}

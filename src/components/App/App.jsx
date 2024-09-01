@@ -1,16 +1,21 @@
 import "./App.css";
-import Product from "./Product.jsx";
-import Mailbox from "./Mailbox.jsx";
-import { inbox } from "./messages.js";
-import { Card } from "./Card.jsx";
-import { Alert } from "./Alert.jsx";
-import { User } from "./User.jsx";
-import AlertBtn from "./AlertBtn.jsx";
-import CustomBtn from "./CustomBtn.jsx";
-import CounterBtn from "./CounterBtn.jsx";
-import ToggleElement from "./ToggleElement.jsx";
-import CounterAll from "./CounterAll.jsx";
-import ChangeCoords from './ChangeCoords.jsx'
+import Product from "../Product/Product.jsx";
+import Mailbox from "../Mailbox/Mailbox.jsx";
+import { inbox } from "../messages.js";
+import { Card } from "../Card/Card.jsx";
+import { Alert } from "../Alert/Alert.jsx";
+import { User } from "../User/User.jsx";
+import AlertBtn from "../AlertBtn/AlertBtn.jsx";
+import CustomBtn from "../CustomBtn/CustomBtn.jsx";
+import CounterBtn from "../CounterBtn/CounterBtn.jsx";
+import ToggleElement from "../ToggleElement/ToggleElement.jsx";
+import CounterAll from "../CounterAll/CounterAll.jsx";
+import ChangeCoords from "../ChangeCoords/ChangeCoords.jsx";
+import NewsAPIFetch from "../NewsAPIFetch/NewsAPIFetch.jsx";
+import Memo from "../Memo/Memo.jsx";
+import Player from "../Player/Player.jsx";
+import Toggle from "../UsageOfCustomHooks/Toggle.jsx";
+import UserMenu from "../UserMenu/UserMenu.jsx";
 
 export default function App() {
 	return (
@@ -94,6 +99,28 @@ export default function App() {
 			<hr />
 
 			<ChangeCoords />
+
+			<hr />
+
+			<hr />
+
+			<NewsAPIFetch />
+
+			<hr />
+
+			<Memo />
+
+			<hr />
+
+			<Player source="http://media.w3.org/2010/05/sintel/trailer.mp4" />
+
+			<hr />
+
+			<Toggle />
+
+			<hr />
+
+			<UserMenu />
 		</div>
 	);
 }
