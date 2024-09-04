@@ -33,10 +33,34 @@
     }
 }
 
-.card {
-    padding: 2em;
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    li {
+        position: relative;
+    }
+    a:hover {
+        color: rgb(24, 221, 235);
+    }
+    li + li::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: white;
+    }
 }
 
-.read-the-docs {
-    color: #888;
+.active {
+    color: rgb(24, 221, 235);
+}
+
+.counterBtns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
