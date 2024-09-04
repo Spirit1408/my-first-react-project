@@ -108,7 +108,7 @@ export default function App() {
 }
 
 function Home() {
-	return <h1>Welcome to the App</h1>;
+	return <h1>Welcome to my first React app!</h1>;
 }
 
 function Products() {
