@@ -5,23 +5,25 @@ import {
 	Routes,
 	NavLink,
 } from "react-router-dom";
-import Product from "../Product/Product.jsx";
-import Mailbox from "../Mailbox/Mailbox.jsx";
 import { inbox } from "../messages.js";
 import { Card } from "../Card/Card.jsx";
 import { Alert } from "../Alert/Alert.jsx";
 import { User } from "../User/User.jsx";
-import AlertBtn from "../AlertBtn/AlertBtn.jsx";
-import CustomBtn from "../CustomBtn/CustomBtn.jsx";
-import CounterBtn from "../CounterBtn/CounterBtn.jsx";
-import ToggleElement from "../ToggleElement/ToggleElement.jsx";
-import CounterAll from "../CounterAll/CounterAll.jsx";
-import ChangeCoords from "../ChangeCoords/ChangeCoords.jsx";
-import NewsAPIFetch from "../NewsAPIFetch/NewsAPIFetch.jsx";
-import Memo from "../Memo/Memo.jsx";
-import Player from "../Player/Player.jsx";
-import Toggle from "../UsageOfCustomHooks/Toggle.jsx";
-import UserMenu from "../UserMenu/UserMenu.jsx";
+import { lazy, Suspense } from "react";
+
+const Product = lazy(() => import("../Product/Product.jsx"));
+const Mailbox = lazy(() => import("../Mailbox/Mailbox.jsx"));
+const AlertBtn = lazy(() => import("../AlertBtn/AlertBtn.jsx"));
+const CustomBtn = lazy(() => import("../CustomBtn/CustomBtn.jsx"));
+const CounterBtn = lazy(() => import("../CounterBtn/CounterBtn.jsx"));
+const ToggleElement = lazy(() => import("../ToggleElement/ToggleElement.jsx"));
+const CounterAll = lazy(() => import("../CounterAll/CounterAll.jsx"));
+const ChangeCoords = lazy(() => import("../ChangeCoords/ChangeCoords.jsx"));
+const NewsAPIFetch = lazy(() => import("../NewsAPIFetch/NewsAPIFetch.jsx"));
+const Memo = lazy(() => import("../Memo/Memo.jsx"));
+const Player = lazy(() => import("../Player/Player.jsx"));
+const Toggle = lazy(() => import("../UsageOfCustomHooks/Toggle.jsx"));
+const UserMenu = lazy(() => import("../UserMenu/UserMenu.jsx"));
 
 export default function App() {
 	return (
@@ -77,31 +79,33 @@ export default function App() {
 					</ul>
 				</nav>
 
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/products" element={<Products />} />
-					<Route path="/cards" element={<Cards />} />
-					<Route
-						path="/mailbox"
-						element={<Mailbox username="Oleh" messages={inbox} />}
-					/>
-					<Route path="/alerts" element={<Alerts />} />
-					<Route path="/user" element={<User name="Oleh" />} />
-					<Route path="/buttons" element={<Buttons />} />
-					<Route path="/counter" element={<Counter />} />
-					<Route path="/toggle-element" element={<ToggleElement />} />
-					<Route path="/coords" element={<ChangeCoords />} />
-					<Route path="/news" element={<NewsAPIFetch />} />
-					<Route path="/memo" element={<Memo />} />
-					<Route
-						path="/player"
-						element={
-							<Player source="http://media.w3.org/2010/05/sintel/trailer.mp4" />
-						}
-					/>
-					<Route path="/toggle" element={<Toggle />} />
-					<Route path="/user-menu" element={<UserMenu />} />
-				</Routes>
+				<Suspense fallback={<div>Loading page...</div>}>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/products" element={<Products />} />
+						<Route path="/cards" element={<Cards />} />
+						<Route
+							path="/mailbox"
+							element={<Mailbox username="Oleh" messages={inbox} />}
+						/>
+						<Route path="/alerts" element={<Alerts />} />
+						<Route path="/user" element={<User name="Oleh" />} />
+						<Route path="/buttons" element={<Buttons />} />
+						<Route path="/counter" element={<Counter />} />
+						<Route path="/toggle-element" element={<ToggleElement />} />
+						<Route path="/coords" element={<ChangeCoords />} />
+						<Route path="/news" element={<NewsAPIFetch />} />
+						<Route path="/memo" element={<Memo />} />
+						<Route
+							path="/player"
+							element={
+								<Player source="http://media.w3.org/2010/05/sintel/trailer.mp4" />
+							}
+						/>
+						<Route path="/toggle" element={<Toggle />} />
+						<Route path="/user-menu" element={<UserMenu />} />
+					</Routes>
+				</Suspense>
 			</div>
 		</Router>
 	);
